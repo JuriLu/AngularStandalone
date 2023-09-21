@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
-@Injectable()  //! case that we do not provide in root
+@Injectable()
 export class AnalyticsService {
-  registerClick() {
-    console.log('Clicked!');
-  }
+    registerClick(): void {
+        console.log('Clicked!');
+    }
 }

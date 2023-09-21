@@ -13,10 +13,7 @@ if (environment.production) {
 bootstrapApplication(AppComponent,{
   providers:[
       AnalyticsService,
-      importProvidersFrom(AppRoutingModule), //* Theoretically Routing module is not a provider, but it
-                                            //* server as a provider in this case, this makes it recognizable for app component
+      importProvidersFrom(AppRoutingModule),
   ]
 })
 
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .catch(err => console.error(err));

@@ -8,7 +8,6 @@ import {HighlightDirective} from "../../shared/highlight.directive";
     selector: 'app-details',
     templateUrl: './details.component.html',
     styleUrls: ['./details.component.css'],
-    //! providers:[AnalyticsService]  1 solution ,not new but its no shared state
 
 })
 export class DetailsComponent {
