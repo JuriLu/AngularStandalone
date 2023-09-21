@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-import { AnalyticsService } from 'src/app/shared/analytics.service';
+import {Component} from '@angular/core';
+import {AnalyticsService} from 'src/app/shared/analytics.service';
+import {HighlightDirective} from "../../shared/highlight.directive";
+import {SharedModule} from "../../shared/shared.module";
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css'],
+    standalone: true,
+    imports: [SharedModule],  //** to import highlight directive
+    selector: 'app-details',
+    templateUrl: './details.component.html',
+    styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
-  constructor(private analyticsService: AnalyticsService) {}
+    constructor(private analyticsService: AnalyticsService) {
+    }
 
-  onClick() {
-    this.analyticsService.registerClick();
-  }
+    onClick() {
+        this.analyticsService.registerClick();
+    }
 }
